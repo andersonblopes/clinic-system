@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Patients</title>
+<link href="webjars/bootstrap/4.5.3/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div th:if="${message}" th:text="${message}"
+			class="alert alert-info" role="alert"></div>
+
+		<nav class="navbar navbar-light bg-light">
+			<a href="#" class="btn btn-primary btn-sm" title="Includes a new patient"
+				role="button" aria-pressed="true" th:href="@{/new-patient}">New Patient</a>
+			  <form class="form-inline">
+			    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			  </form>
+		</nav>
+
+		<div class="table-responsive">
+			<table
+				class="table table-sm table-striped table-bordered table-hover">
+				<caption>List of patients</caption>
+				<thead class="thead-light">
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Name</th>
+						<th scope="col">Age</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="patient : ${patients}">
+						<td th:text="${patient.id}"></td>
+						<td th:text="${patient.name}"></td>
+						<td th:text="${patient.age}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+	<script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="webjars/bootstrap/4.4.3/js/bootstrap.min.js"></script>
+</body>
+</html>
