@@ -22,10 +22,17 @@ import com.lopes.clinic.service.PatientManager;
 @Controller
 public class PatientController {
 
+	/** The Constant LOG. */
 	private static final Logger LOG = LoggerFactory.getLogger(PatientController.class);
 
+	/** The patient manager. */
 	private PatientManager patientManager;
 
+	/**
+	 * Instantiates a new patient controller.
+	 *
+	 * @param patientManager the patient manager
+	 */
 	public PatientController(PatientManager patientManager) {
 		this.patientManager = patientManager;
 	}
@@ -37,9 +44,15 @@ public class PatientController {
 	 */
 	@GetMapping("/patients")
 	public ModelAndView findAll() {
+
+		LOG.info("Invoke findAll");
+
 		ModelAndView view = new ModelAndView();
 		view.setViewName("patients");
 		view.addObject("patients", patientManager.findAll());
+
+		LOG.info("return findAll with {}", view);
+
 		return view;
 	}
 
@@ -52,6 +65,8 @@ public class PatientController {
 	@GetMapping("/new-patient")
 	public String createPatient(Model model) {
 
+		LOG.info("Invoke createPatient with {}", model);
+
 		model.addAttribute("patient", new Patient());
 		return "new-patient";
 	}
@@ -62,6 +77,7 @@ public class PatientController {
 	 * @param patient  the patient
 	 * @param result   the result
 	 * @param redirect the redirect
+	 * @param model    the model
 	 * @return the string
 	 */
 	@PostMapping("/patient")
@@ -74,7 +90,7 @@ public class PatientController {
 			return "new-patient";
 		}
 
-		if (patientManager.save(patient)) {
+		if (patientManager.create(patient).getId() != null) {
 			redirect.addFlashAttribute("message", "Patient successfully created.");
 			return "redirect:patients";
 		}
