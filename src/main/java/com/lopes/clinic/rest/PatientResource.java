@@ -11,20 +11,25 @@ import com.lopes.clinic.model.Patient;
 import com.lopes.clinic.service.PatientManager;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class PatientResource.
+ * The type Patient resource.
  */
 @RestController
 public class PatientResource implements PatientApi {
 
-	/** The Constant LOG. */
+	/**
+	 * The constant LOG.
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(PatientResource.class);
 
-	/** The patient manager. */
-	private PatientManager patientManager;
+	/**
+	 * The Patient manager.
+	 */
+	private final PatientManager patientManager;
 
 	/**
-	 * Instantiates a new patient resource.
+	 * Instantiates a new Patient resource.
 	 *
 	 * @param patientManager the patient manager
 	 */
@@ -33,7 +38,7 @@ public class PatientResource implements PatientApi {
 	}
 
 	/**
-	 * Find all.
+	 * Find all list.
 	 *
 	 * @return the list
 	 */
@@ -46,7 +51,7 @@ public class PatientResource implements PatientApi {
 	}
 
 	/**
-	 * Find one.
+	 * Find one response entity.
 	 *
 	 * @param id the id
 	 * @return the response entity
@@ -62,10 +67,10 @@ public class PatientResource implements PatientApi {
 	}
 
 	/**
-	 * Creates the.
+	 * Create patient.
 	 *
 	 * @param patient the patient
-	 * @return the response entity
+	 * @return the patient
 	 */
 	@Override
 	public Patient create(Patient patient) {
@@ -77,7 +82,7 @@ public class PatientResource implements PatientApi {
 	}
 
 	/**
-	 * Update.
+	 * Update response entity.
 	 *
 	 * @param id      the id
 	 * @param patient the patient

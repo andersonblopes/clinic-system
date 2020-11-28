@@ -8,30 +8,37 @@ import javax.validation.constraints.Size;
 // TODO: Auto-generated Javadoc
 
 /**
- * The Class Patient.
+ * The type Patient.
  */
 public class Patient {
 
-	/** The id. */
+	/**
+	 * The Id.
+	 */
 	private Long id;
 
-	/** The name. */
+	/**
+	 * The Name.
+	 */
 	@NotBlank(message = "Name cannot be blank")
 	@Size(min = 3, max = 20, message = "Name must have between 3 and 20 letters")
 	private String name;
 
+	/**
+	 * The Age.
+	 */
 	@Min(value = 1, message = "Age should not be less than 1")
 	@Max(value = 150, message = "Age should not be greater than 150")
 	private int age;
 
 	/**
-	 * Instantiates a new patient.
+	 * Instantiates a new Patient.
 	 */
 	public Patient() {
 	}
 
 	/**
-	 * Instantiates a new patient.
+	 * Instantiates a new Patient.
 	 *
 	 * @param id   the id
 	 * @param name the name
@@ -44,7 +51,7 @@ public class Patient {
 	}
 
 	/**
-	 * Gets the id.
+	 * Gets id.
 	 *
 	 * @return the id
 	 */
@@ -53,16 +60,16 @@ public class Patient {
 	}
 
 	/**
-	 * Sets the id.
+	 * Sets id.
 	 *
-	 * @param id the new id
+	 * @param id the id
 	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
 	/**
-	 * Gets the name.
+	 * Gets name.
 	 *
 	 * @return the name
 	 */
@@ -71,16 +78,16 @@ public class Patient {
 	}
 
 	/**
-	 * Sets the name.
+	 * Sets name.
 	 *
-	 * @param name the new name
+	 * @param name the name
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	/**
-	 * Gets the age.
+	 * Gets age.
 	 *
 	 * @return the age
 	 */
@@ -89,16 +96,16 @@ public class Patient {
 	}
 
 	/**
-	 * Sets the age.
+	 * Sets age.
 	 *
-	 * @param age the new age
+	 * @param age the age
 	 */
 	public void setAge(int age) {
 		this.age = age;
 	}
 
 	/**
-	 * To string.
+	 * To string string.
 	 *
 	 * @return the string
 	 */
@@ -108,7 +115,7 @@ public class Patient {
 	}
 
 	/**
-	 * Hash code.
+	 * Hash code int.
 	 *
 	 * @return the int
 	 */
@@ -121,10 +128,10 @@ public class Patient {
 	}
 
 	/**
-	 * Equals.
+	 * Equals boolean.
 	 *
 	 * @param obj the obj
-	 * @return true, if successful
+	 * @return the boolean
 	 */
 	@Override
 	public boolean equals(Object obj) {
@@ -136,11 +143,8 @@ public class Patient {
 			return false;
 		Patient other = (Patient) obj;
 		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
+			return other.id == null;
+		} else return id.equals(other.id);
 	}
 
 }

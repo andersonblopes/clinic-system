@@ -4,18 +4,19 @@
 package com.lopes.clinic.rest.exception;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class PatientNotFoundException.
- *
- * @author ander
+ * The type Clinic system api exception.
  */
 public class ClinicSystemApiException extends RuntimeException {
 
-	/** The Constant serialVersionUID. */
+	/**
+	 * The constant serialVersionUID.
+	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Instantiates a new clinic system api exception.
+	 * Instantiates a new Clinic system api exception.
 	 *
 	 * @param message the message
 	 */

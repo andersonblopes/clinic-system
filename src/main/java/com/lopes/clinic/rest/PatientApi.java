@@ -20,13 +20,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.lopes.clinic.model.Patient;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Interface PatientApi.
+ * The interface Patient api.
  */
 public interface PatientApi extends Versionable {
 
 	/**
-	 * Find all.
+	 * Find all list.
 	 *
 	 * @return the list
 	 */
@@ -34,7 +35,7 @@ public interface PatientApi extends Versionable {
 	List<Patient> findAll();
 
 	/**
-	 * Find one.
+	 * Find one response entity.
 	 *
 	 * @param id the id
 	 * @return the response entity
@@ -43,7 +44,7 @@ public interface PatientApi extends Versionable {
 	ResponseEntity<Patient> findOne(@PathVariable("id") Long id);
 
 	/**
-	 * Creates the.
+	 * Create patient.
 	 *
 	 * @param patient the patient
 	 * @return the patient
@@ -53,7 +54,7 @@ public interface PatientApi extends Versionable {
 	Patient create(@Valid @RequestBody Patient patient);
 
 	/**
-	 * Update.
+	 * Update response entity.
 	 *
 	 * @param id      the id
 	 * @param patient the patient

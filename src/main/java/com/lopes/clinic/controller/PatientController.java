@@ -16,20 +16,25 @@ import com.lopes.clinic.model.Patient;
 import com.lopes.clinic.service.PatientManager;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class PatientController.
+ * The type Patient controller.
  */
 @Controller
 public class PatientController {
 
-	/** The Constant LOG. */
+	/**
+	 * The constant LOG.
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(PatientController.class);
 
-	/** The patient manager. */
-	private PatientManager patientManager;
+	/**
+	 * The Patient manager.
+	 */
+	private final PatientManager patientManager;
 
 	/**
-	 * Instantiates a new patient controller.
+	 * Instantiates a new Patient controller.
 	 *
 	 * @param patientManager the patient manager
 	 */
@@ -38,7 +43,7 @@ public class PatientController {
 	}
 
 	/**
-	 * Find all.
+	 * Find all model and view.
 	 *
 	 * @return the model and view
 	 */
@@ -57,7 +62,7 @@ public class PatientController {
 	}
 
 	/**
-	 * Creates the patient.
+	 * Create patient string.
 	 *
 	 * @param model the model
 	 * @return the string
@@ -72,7 +77,7 @@ public class PatientController {
 	}
 
 	/**
-	 * Creates the patient.
+	 * Create patient string.
 	 *
 	 * @param patient  the patient
 	 * @param result   the result

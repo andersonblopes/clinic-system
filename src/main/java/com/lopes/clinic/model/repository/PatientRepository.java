@@ -11,20 +11,25 @@ import org.springframework.stereotype.Repository;
 import com.lopes.clinic.model.Patient;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class PatientRepository.
+ * The type Patient repository.
  */
 @Repository
 public class PatientRepository {
 
-	/** The Constant LOG. */
+	/**
+	 * The constant LOG.
+	 */
 	private static final Logger LOG = LoggerFactory.getLogger(PatientRepository.class);
 
-	/** The patients. */
-	private List<Patient> patients;
+	/**
+	 * The Patients.
+	 */
+	private final List<Patient> patients;
 
 	/**
-	 * Instantiates a new patient repository.
+	 * Instantiates a new Patient repository.
 	 */
 	public PatientRepository() {
 		this.patients = new ArrayList<>();
@@ -35,7 +40,7 @@ public class PatientRepository {
 	}
 
 	/**
-	 * Find all.
+	 * Find all list.
 	 *
 	 * @return the list
 	 */
@@ -47,7 +52,7 @@ public class PatientRepository {
 	}
 
 	/**
-	 * Save.
+	 * Save patient.
 	 *
 	 * @param patient the patient
 	 * @return the patient
@@ -68,7 +73,7 @@ public class PatientRepository {
 	}
 
 	/**
-	 * Fin by id.
+	 * Fin by id optional.
 	 *
 	 * @param id the id
 	 * @return the optional
@@ -97,7 +102,7 @@ public class PatientRepository {
 	}
 
 	/**
-	 * Removes the.
+	 * Remove.
 	 *
 	 * @param id the id
 	 */

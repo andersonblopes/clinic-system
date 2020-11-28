@@ -4,16 +4,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class ClinicSystemApplication.
+ * The type Clinic system application.
  */
 @SpringBootApplication
-public class ClinicSystemApplication {
+public class 	ClinicSystemApplication {
 
 	/**
-	 * The main method.
+	 * The entry point of application.
 	 *
-	 * @param args the arguments
+	 * @param args the input arguments
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(ClinicSystemApplication.class, args);

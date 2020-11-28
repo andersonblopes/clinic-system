@@ -12,8 +12,9 @@ import com.lopes.clinic.rest.exception.ClinicSystemApiException;
 import com.lopes.clinic.rest.exception.PatientNotFoundException;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class PatientAdvice.
+ * The type Patient advice.
  */
 @ControllerAdvice
 public class PatientAdvice {

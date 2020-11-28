@@ -1,16 +1,19 @@
 package com.lopes.clinic.rest.exception;
 
 // TODO: Auto-generated Javadoc
+
 /**
- * The Class PatientNotFoundException.
+ * The type Patient not found exception.
  */
 public class PatientNotFoundException extends RuntimeException {
 
-	/** The Constant serialVersionUID. */
+	/**
+	 * The constant serialVersionUID.
+	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Instantiates a new patient not found exception.
+	 * Instantiates a new Patient not found exception.
 	 *
 	 * @param message the message
 	 */
